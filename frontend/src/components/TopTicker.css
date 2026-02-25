@@ -1,0 +1,103 @@
+.top-ticker-master {
+  display: flex;
+  height: 48px; /* Slightly taller for better readability of 4 sections */
+  width: 100%;
+  color: white;
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 600;
+  overflow: hidden;
+  z-index: 1001;
+  position: relative;
+}
+
+.ticker-section {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  height: 100%;
+}
+
+/* 1. Meta Section (Green) */
+.ticker-meta {
+  background-color: #22a348;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+/* 2. News Ticker (Orange) */
+.ticker-news {
+  background-color: #f26522;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.ticker-scroll-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticker-scroll-content {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker-slide 30s linear infinite;
+}
+
+.ticker-news-item {
+  padding-right: 60px;
+}
+
+/* 3. Contact Section (Red-Orange) */
+.ticker-contact-links {
+  background-color: #d94d1a;
+  flex: 0 0 auto;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-text {
+  font-weight: 700;
+}
+
+/* 4. Social Section (Blue) */
+.ticker-social {
+  background-color: #1a73e8;
+  flex: 0 0 auto;
+  gap: 12px;
+  padding-right: 25px;
+}
+
+.social-b {
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+@keyframes ticker-slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 1024px) {
+  .top-ticker-master {
+    height: auto;
+    flex-wrap: wrap;
+  }
+  .ticker-meta, .ticker-news, .ticker-contact-links, .ticker-social {
+    flex: 1 0 50%;
+    height: 40px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .ticker-meta, .ticker-news, .ticker-contact-links, .ticker-social {
+    flex: 1 0 100%;
+  }
+}
+

@@ -1,0 +1,194 @@
+/* ===========================
+   PRE-FOOTER SECTION
+   =========================== */
+.prefooter-section {
+  position: relative;
+  background: #ffffff;
+  padding: 80px 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Animated background blobs */
+.pf-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.pf-blob-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #28a745, transparent);
+  top: -100px;
+  left: -80px;
+  animation: blobFloat 8s ease-in-out infinite alternate;
+}
+
+.pf-blob-2 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #1a73e8, transparent);
+  bottom: -80px;
+  right: -60px;
+  animation: blobFloat 10s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes blobFloat {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(30px, 20px) scale(1.1); }
+}
+
+/* Inner layout — horizontal two columns */
+.prefooter-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===========================
+   LEFT: TEXT
+   =========================== */
+.pf-text {
+  flex: 1;
+  max-width: 680px;
+}
+
+.pf-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1e21;
+  line-height: 1.3;
+  margin-bottom: 16px;
+  font-family: var(--font-heading);
+}
+
+.pf-highlight {
+  background: linear-gradient(to right, #28a745, #85e09a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pf-desc {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.7;
+  max-width: 580px;
+}
+
+/* ===========================
+   RIGHT: CTA BUTTON
+   =========================== */
+.pf-action {
+  flex-shrink: 0;
+}
+
+.pf-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #28a745, #20c957);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 16px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(40, 167, 69, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  white-space: nowrap;
+}
+
+.pf-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 14px 40px rgba(40, 167, 69, 0.55);
+}
+
+/* Play icon circle */
+.pf-btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.25);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+}
+
+.pf-btn:hover .pf-btn-icon {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Arrow slides in on hover */
+.pf-btn-arrow {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.pf-btn:hover .pf-btn-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Ripple rings */
+.pf-ripple {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripplePulse 2.5s ease-out infinite;
+  pointer-events: none;
+}
+
+.pf-ripple-1 {
+  width: 100%;
+  height: 100%;
+  animation-delay: 0s;
+}
+
+.pf-ripple-2 {
+  width: 120%;
+  height: 150%;
+  animation-delay: 0.8s;
+}
+
+@keyframes ripplePulse {
+  0%   { transform: translate(-50%, -50%) scale(0.8); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(1.6); opacity: 0; }
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 900px) {
+  .prefooter-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .pf-heading {
+    font-size: 1.6rem;
+  }
+
+  .pf-desc {
+    margin: 0 auto;
+  }
+}

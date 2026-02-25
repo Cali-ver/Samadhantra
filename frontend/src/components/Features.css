@@ -1,0 +1,163 @@
+.features-flow-section {
+  padding: 60px 0;
+  background-color: var(--bg-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.features-flow-visualizer {
+  position: relative;
+  max-width: 1000px;
+  margin: 40px auto 0;
+  min-height: 800px;
+}
+
+.flow-line-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flow-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.flow-steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+  padding: 20px 0;
+}
+
+.flow-step {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 50%;
+  position: relative;
+}
+
+.flow-step.left {
+  align-self: flex-start;
+  text-align: right;
+  flex-direction: row-reverse;
+  padding-right: 50px;
+}
+
+.flow-step.right {
+  align-self: flex-end;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.step-icon-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--bg-card);
+  border: 4px solid var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  z-index: 2;
+  position: relative;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.flow-step:hover .step-icon {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.1);
+}
+
+.step-number {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 30px;
+  height: 30px;
+  background: var(--secondary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.8rem;
+  z-index: 3;
+}
+
+.step-content {
+  max-width: 350px;
+}
+
+.step-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: var(--secondary);
+  font-weight: 800;
+}
+
+.step-content p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Mobile Styles */
+@media (max-width: 992px) {
+  .features-flow-visualizer {
+    min-height: auto;
+  }
+  
+  .flow-line-container {
+    left: 40px;
+    width: 4px;
+    background: rgba(40, 167, 69, 0.1);
+  }
+
+  .flow-svg {
+    display: none; /* Simplify on mobile */
+  }
+
+  .flow-steps-container {
+    gap: 40px;
+  }
+
+  .flow-step {
+    width: 100%;
+    flex-direction: row !important;
+    text-align: left !important;
+    padding: 0 0 0 80px !important;
+  }
+
+  .step-icon-wrapper {
+    position: absolute;
+    left: 2px;
+  }
+
+  .step-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .step-content {
+    max-width: 100%;
+  }
+}
+
+[data-theme='dark'] .step-icon {
+  background: rgba(31, 35, 39, 0.9);
+}

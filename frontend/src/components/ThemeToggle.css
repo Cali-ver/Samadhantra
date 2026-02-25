@@ -1,0 +1,64 @@
+.theme-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: var(--transition);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  background-color: var(--primary-dark);
+}
+
+.tooltip {
+  position: absolute;
+  right: 75px;
+  background-color: #1a1e21;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.theme-toggle:hover .tooltip {
+  opacity: 1;
+  right: 85px;
+}
+
+.theme-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease;
+}
+
+.theme-icon.dark {
+  transform: rotate(360deg);
+}
+
+[data-theme='dark'] .theme-toggle {
+  background-color: #f8f9fa;
+  color: #1a1e21;
+}
+
+[data-theme='dark'] .tooltip {
+  background-color: white;
+  color: #1a1e21;
+}
