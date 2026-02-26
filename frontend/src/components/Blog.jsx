@@ -53,50 +53,47 @@ const Blog = () => {
 
   return (
     <section className="blog-section">
-      {/* Section Header */}
-      <div className="blog-header">
-        <span className="blog-tag">OUR BLOGS</span>
-        <h2 className="blog-title">
-          Insights, Stories &amp; Knowledge from<br />the Samadhantra Ecosystem
-        </h2>
-      </div>
+      <div className="container">
+        <div className="blog-header">
+          <span className="blog-tag">OUR BLOGS</span>
+          <h2 className="blog-title">
+            Insights, Stories & Knowledge from<br />the Samadhantra Ecosystem
+          </h2>
+        </div>
 
-      {/* Cards Grid */}
-      <div className="container blog-grid">
-        {posts.map((post, i) => (
-          <article
-            key={post.id}
-            className="blog-card"
-            ref={(el) => (cardsRef.current[i] = el)}
-            style={{ transitionDelay: `${i * 0.12}s` }}
-          >
-            {/* Image */}
-            <div className="blog-card__img-wrap">
-              <img src={post.image} alt={post.title} className="blog-card__img" />
-              <div className="blog-card__img-overlay" />
-            </div>
-
-            {/* Meta */}
-            <div className="blog-card__body">
-              <div className="blog-card__meta">
-                <span className="blog-card__meta-item">
-                  <Clock size={13} />
-                  {post.date}
-                </span>
-                <span className="blog-card__meta-item">
-                  <User size={13} />
-                  {post.author}
-                </span>
+        <div className="blog-grid">
+          {posts.map((post, i) => (
+            <article
+              key={post.id}
+              className="blog-card"
+              ref={(el) => (cardsRef.current[i] = el)}
+              style={{ transitionDelay: `${i * 0.12}s` }}
+            >
+              <div className="blog-card__img-wrap">
+                <img src={post.image} alt={post.title} className="blog-card__img" />
               </div>
 
-              <h3 className="blog-card__heading">{post.title}</h3>
+              <div className="blog-card__body">
+                <div className="blog-card__meta">
+                  <span className="blog-card__meta-item">
+                    <Clock size={16} />
+                    {post.date}
+                  </span>
+                  <span className="blog-card__meta-item">
+                    <User size={16} />
+                    {post.author}
+                  </span>
+                </div>
 
-              <a href={post.href} className="blog-card__link">
-                Read more <ArrowRight size={14} className="blog-card__link-arrow" />
-              </a>
-            </div>
-          </article>
-        ))}
+                <h3 className="blog-card__heading">{post.title}</h3>
+
+                <a href={post.href} className="blog-card__link">
+                  Read more
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
