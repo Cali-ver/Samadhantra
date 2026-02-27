@@ -4,6 +4,10 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Services from './pages/Services';
+import Stakeholders from './pages/Stakeholders';
+import Events from './pages/Events';
+import Blogs from './pages/Blogs';
 import ThemeToggle from './components/ThemeToggle';
 import './App.css';
 
@@ -17,6 +21,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/stakeholders" element={<Stakeholders />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/blogs" element={<Blogs />} />
           </Routes>
         </main>
         <Footer />

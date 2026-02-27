@@ -9,9 +9,9 @@ import {
   Linkedin, 
   Youtube 
 } from "lucide-react";
-import "./TopTicker.css";
+import "./Topbar.css";
 
-const TopTicker = () => {
+const Topbar = () => {
   const news = [
     "S$ 6 bn in 2022 is projected to surpass US$ 13 bn by 2026: Gajendra Singh Shekhawat",
     "Samadhantra Innovation Platform: Uniting Academia, Industry, and Startups.",
@@ -65,4 +65,4 @@ const TopTicker = () => {
   );
 };
 
-export default TopTicker;
+export default Topbar;

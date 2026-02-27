@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, Search, Home } from 'lucide-react';
-import TopTicker from './TopTicker';
+import Topbar from './Topbar';
 import './Navbar.css';
 import logo from '../assets/logo.jpeg';
 
