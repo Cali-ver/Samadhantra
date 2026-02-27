@@ -1,5 +1,5 @@
 .why-section {
-  padding: 80px 20px;
+  padding: 40px 20px 80px 20px;
   background-color: var(--bg-primary); /* Assuming theme variables exist */
   color: var(--text-primary);
 }

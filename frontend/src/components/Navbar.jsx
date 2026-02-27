@@ -50,10 +50,12 @@ const Navbar = () => {
 
             <div className="nav-center">
               <ul className={`nav-links ${isMobileMenuOpen ? 'nav-active' : ''}`}>
-                <li><a href="/" className="home-icon-link"><Home size={20} /></a></li>
+                <li><a href="/">HOME</a></li>
                 <li><a href="/about">ABOUT US <ChevronDown size={14} /></a></li>
                 <li><a href="/stakeholders">STAKEHOLDERS</a></li>
                 <li><a href="/services">SERVICES</a></li>
+                <li><a href="/events">EVENTS</a></li>
+                <li><a href="/blogs">BLOGS</a></li>
                 <li><a href="/contact">CONTACT</a></li>
               </ul>
             </div>

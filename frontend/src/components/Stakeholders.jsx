@@ -77,85 +77,136 @@ const Stakeholders = () => {
     <section className="stakeholders-network-section">
       <div className="network-bg-overlay"></div>
       
-      {/* Interaction Layer */}
-      <div className="container network-animation-container">
-        {!isMobile && (
-          <svg className="network-svg-overlay" viewBox="0 0 1000 700">
-            {connections.map((c, i) => {
-              const fromName = stakeholders.find(s => s.id === c.from)?.title;
-              const toName = stakeholders.find(s => s.id === c.to)?.title;
-              const isActive = activeConnection === i;
-              const color = c.type === 'mutual' ? "#3b82f6" : "#3b82f6";
-              
-              return (
-                <g 
-                  key={`connection-${i}`}
-                  onMouseEnter={() => setActiveConnection(i)}
-                  onMouseLeave={() => setActiveConnection(null)}
-                  style={{ cursor: 'pointer' }}
+      {/* Decorative Dots */}
+      <div className="dot-pattern top-left"></div>
+      
+      <div className="container stakeholders-flex-wrapper">
+        {/* Interaction Layer (Card Style) */}
+        <div className="network-card-wrapper">
+          <h3 className="network-card-title">All Stakeholders Benefiting From Each Other</h3>
+          <div className="network-animation-container">
+            {!isMobile && (
+              <svg className="network-svg-overlay" viewBox="0 0 1000 700">
+                {connections.map((c, i) => {
+                  const isActive = activeConnection === i;
+                  const color = "#3b82f6";
+                  
+                  return (
+                    <g 
+                      key={`connection-${i}`}
+                      onMouseEnter={() => setActiveConnection(i)}
+                      onMouseLeave={() => setActiveConnection(null)}
+                      style={{ cursor: 'pointer' }}
+                    >
+                       <path 
+                         d={getPath(c)} 
+                         fill="none" 
+                         stroke="transparent" 
+                         strokeWidth="30" 
+                       />
+                       {isActive && (
+                         <motion.path
+                           initial={{ opacity: 0 }}
+                           animate={{ opacity: 0.2 }}
+                           d={getPath(c)}
+                           fill="none"
+                           stroke={color}
+                           strokeWidth="15"
+                           filter="blur(5px)"
+                         />
+                       )}
+                       <motion.circle 
+                         r={isActive ? "6" : "4"} 
+                         fill={color} 
+                         filter="blur(2px)"
+                         animate={{ scale: isActive ? 1.5 : 1 }}
+                       >
+                          <animateMotion dur={`${3 + Math.random() * 2}s`} repeatCount="indefinite" path={getPath(c)} />
+                       </motion.circle>
+                       <motion.circle r="2" fill="white">
+                          <animateMotion dur={`${3 + Math.random() * 2}s`} repeatCount="indefinite" path={getPath(c)} begin="1s" />
+                       </motion.circle>
+                    </g>
+                  );
+                })}
+              </svg>
+            )}
+
+            <div className={`narrative-panel ${activeConnection !== null ? 'is-visible' : ''}`}>
+              {activeConnection !== null && (
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="narrative-content"
                 >
-                   {/* Wide invisible path for easier hover */}
-                   <path 
-                     d={getPath(c)} 
-                     fill="none" 
-                     stroke="transparent" 
-                     strokeWidth="30" 
-                   />
+                  <div className="narrative-header">
+                    <span className={`narrative-tag ${connections[activeConnection].type}`}>
+                      {connections[activeConnection].type === 'mutual' ? 'Mutual Collaboration' : 'Strategic Benefit'}
+                    </span>
+                    <div className="narrative-path">
+                      <strong>{stakeholders.find(s => s.id === connections[activeConnection].from)?.title}</strong>
+                      <span className="path-arrow">→</span>
+                      <strong>{stakeholders.find(s => s.id === connections[activeConnection].to)?.title}</strong>
+                    </div>
+                  </div>
+                  <p className="narrative-desc">{connections[activeConnection].desc}</p>
+                </motion.div>
+              )}
+            </div>
+          </div>
+          <div className="network-card-footer">
+             <p>Interrelation and mutual benefit for their needs</p>
+             <div className="network-legend-mini">
+                <span className="legend-item"><span className="legend-arrow benefit"></span> Benefit</span>
+                <span className="legend-item"><span className="legend-arrow mutual"></span> Mutual</span>
+             </div>
+          </div>
+        </div>
 
-                   {/* Active Highlight Path */}
-                   {isActive && (
-                     <motion.path
-                       initial={{ opacity: 0 }}
-                       animate={{ opacity: 0.2 }}
-                       d={getPath(c)}
-                       fill="none"
-                       stroke={color}
-                       strokeWidth="15"
-                       filter="blur(5px)"
-                     />
-                   )}
-                   
-                   {/* Animated Flow Pulse */}
-                   <motion.circle 
-                     r={isActive ? "6" : "4"} 
-                     fill={color} 
-                     filter="blur(2px)"
-                     animate={{ scale: isActive ? 1.5 : 1 }}
-                   >
-                      <animateMotion dur={`${3 + Math.random() * 2}s`} repeatCount="indefinite" path={getPath(c)} />
-                   </motion.circle>
-                   
-                   {/* Secondary pulse */}
-                   <motion.circle r="2" fill="white">
-                      <animateMotion dur={`${3 + Math.random() * 2}s`} repeatCount="indefinite" path={getPath(c)} begin="1s" />
-                   </motion.circle>
-                </g>
-              );
-            })}
-          </svg>
-        )}
+        {/* Content Layer (Right) */}
+        <div className="stakeholders-info-content">
+          <span className="info-badge">ABOUT SAMADHANTRA</span>
+          <h2>Where Requirements Turn into Results</h2>
+          <div className="info-text">
+            <p>
+              Samadhantra is a unified solution system designed to fulfil demand and supply for all stakeholders 
+              through a structured, transparent, and collaborative platform.
+            </p>
+            <p>
+              We bring together individuals, institutions, service providers, industry, academia, NGOs, and 
+              government bodies to create an ecosystem where requirements are clearly identified, resources 
+              are efficiently aligned, and solutions are effectively delivered.
+            </p>
+            <p className="highlight-text-small">
+              Samadhantra is not just a platform—it is a system that enables collaboration, trust, and 
+              sustainable outcomes across sectors.
+            </p>
+          </div>
 
-        {/* Narrative Panel */}
-        <div className={`narrative-panel ${activeConnection !== null ? 'is-visible' : ''}`}>
-          {activeConnection !== null && (
-            <motion.div 
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="narrative-content"
-            >
-              <div className="narrative-header">
-                <span className={`narrative-tag ${connections[activeConnection].type}`}>
-                  {connections[activeConnection].type === 'mutual' ? 'Mutual Collaboration' : 'Strategic Benefit'}
-                </span>
-                <div className="narrative-path">
-                  <strong>{stakeholders.find(s => s.id === connections[activeConnection].from)?.title}</strong>
-                  <span className="path-arrow">→</span>
-                  <strong>{stakeholders.find(s => s.id === connections[activeConnection].to)?.title}</strong>
-                </div>
-              </div>
-              <p className="narrative-desc">{connections[activeConnection].desc}</p>
-            </motion.div>
-          )}
+          <div className="stakeholders-usp-grid">
+            <div className="usp-item">
+              <div className="usp-bullet"></div>
+              <span>One Platform, Every Stakeholder</span>
+            </div>
+            <div className="usp-item">
+              <div className="usp-bullet"></div>
+              <span>Smart & Faster Solution Discovery</span>
+            </div>
+            <div className="usp-item">
+              <div className="usp-bullet"></div>
+              <span>Reduced Complexity, Better Execution</span>
+            </div>
+            <div className="usp-item">
+              <div className="usp-bullet"></div>
+              <span>Seamless Collaboration Across Ecosystem</span>
+            </div>
+          </div>
+
+          <div className="info-actions">
+            <a href="/about" className="btn-know-more">
+              Know More About Samadhantra
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -1,0 +1,154 @@
+.what-we-do-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.what-we-do-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.what-we-do-content {
+  flex: 1;
+  text-align: left;
+}
+
+.wwd-subtitle {
+  color: #004a80;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.wwd-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  max-width: 800px;
+}
+
+.wwd-description p {
+  font-size: 1.1rem;
+  color: #718096;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.wwd-list {
+  list-style: none;
+  padding: 0;
+  margin: 40px 0;
+}
+
+.wwd-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.wwd-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #004a80;
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.wwd-item-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.wwd-item-description {
+  font-size: 1rem;
+  color: #718096;
+  line-height: 1.5;
+}
+
+.wwd-actions {
+  margin-top: 40px;
+}
+
+.read-more-btn {
+  background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+  color: white;
+  padding: 12px 35px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+}
+
+.read-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3);
+  filter: brightness(1.1);
+}
+
+.what-we-do-visual {
+  flex: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.wwd-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.wwd-main-img {
+  width: 100%;
+  height: auto;
+  border-radius: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.wwd-img-accent {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e1f0ff 0%, #f0f7ff 100%);
+  border-radius: 40px;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .wwd-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .what-we-do-section {
+    padding: 60px 20px;
+  }
+  
+  .wwd-title {
+    font-size: 1.8rem;
+  }
+  
+  .what-we-do-container {
+    flex-direction: column;
+  }
+}
