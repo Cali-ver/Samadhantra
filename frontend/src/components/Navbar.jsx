@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <header className={`header-master ${!isVisible ? 'header-hidden' : ''} ${isScrolled ? 'header-scrolled' : ''}`}>
-      <TopTicker />
+      <Topbar />
       <nav className="nav-container">
         <div className="container">
           {/* Main Nav Row */}
