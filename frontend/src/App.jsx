@@ -13,7 +13,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/Samadhantra">
+    <Router>
       <div className="app-shell">
         <Navbar />
         <main className="main-content">
