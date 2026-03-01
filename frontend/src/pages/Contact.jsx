@@ -1,12 +1,16 @@
 import React from 'react';
+import PageHero from '../components/PageHero';
 
 const Contact = () => {
   return (
-    <div className="container" style={{ padding: '100px 0', textAlign: 'center' }}>
-      <h2 style={{ fontSize: '2.5rem', color: 'var(--secondary)', marginBottom: '20px' }}>Contact Us</h2>
-      <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', color: 'var(--text-muted)' }}>
-        Get in touch with us for any queries or collaborations.
-      </p>
+    <div className="contact-page">
+      <PageHero title="Contact Us" />
+      <div className="container" style={{ padding: '80px 0', textAlign: 'center' }}>
+        <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.2rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
+          Get in touch with us for any queries or collaborations. We are here to help you navigate 
+          the Samadhantra ecosystem.
+        </p>
+      </div>
     </div>
   );
 };

@@ -2,20 +2,20 @@ import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import './AboutHero.css';
+import './PageHero.css';
 
-const AboutHero = () => {
+const PageHero = ({ title }) => {
   return (
-    <section className="about-hero">
-      <div className="about-hero-overlay"></div>
-      <div className="container about-hero-container">
-        <div className="about-hero-content">
+    <section className="page-hero">
+      <div className="page-hero-overlay"></div>
+      <div className="container page-hero-container">
+        <div className="page-hero-content">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            About Us
+            {title}
           </motion.h1>
           <motion.nav 
             className="breadcrumbs"
@@ -25,7 +25,7 @@ const AboutHero = () => {
           >
             <Link to="/">Home</Link>
             <ChevronRight size={16} className="breadcrumb-separator" />
-            <span>About Us</span>
+            <span>{title}</span>
           </motion.nav>
         </div>
       </div>
@@ -33,4 +33,4 @@ const AboutHero = () => {
   );
 };
 
-export default AboutHero;
+export default PageHero;

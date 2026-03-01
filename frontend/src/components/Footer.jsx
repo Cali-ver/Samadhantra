@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import logo from '../assets/logo.jpeg';
 
@@ -13,9 +14,9 @@ const Footer = () => {
           <div className="footer-section">
             {/* Logo matching navbar style */}
             <div className="footer-logo-wrap">
-              <a href="/">
+              <Link to="/">
                 <img src={logo} alt="Samadhantra Logo" className="footer-logo-img" />
-              </a>
+              </Link>
             </div>
             <p className="footer-desc">
               A multi-stakeholder innovation platform connecting startups, students, investors, and service providers to enable growth and collaboration.
@@ -31,22 +32,22 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Explore</h4>
             <ul>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/stakeholders">Stakeholders</a></li>
-              <li><a href="/services">Services</a></li>
-              <li><a href="/events">Events</a></li>
-              <li><a href="/blogs">Blogs</a></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/stakeholders">Stakeholders</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/events">Events</Link></li>
+              <li><Link to="/blogs">Blogs</Link></li>
             </ul>
           </div>
 
           <div className="footer-section">
             <h4>Stakeholders</h4>
             <ul>
-              <li><a href="/startups">Startups &amp; MSMEs</a></li>
-              <li><a href="/universities">Universities</a></li>
-              <li><a href="/students">Students</a></li>
-              <li><a href="/investors">Investors</a></li>
-              <li><a href="/vendors">Service Providers</a></li>
+              <li><Link to="/startups">Startups &amp; MSMEs</Link></li>
+              <li><Link to="/universities">Universities</Link></li>
+              <li><Link to="/students">Students</Link></li>
+              <li><Link to="/investors">Investors</Link></li>
+              <li><Link to="/vendors">Service Providers</Link></li>
             </ul>
           </div>
 
@@ -64,7 +65,7 @@ const Footer = () => {
       {/* Bottom copyright bar */}
       <div className="footer-bottom">
         <div className="container">
-          <p>&copy; 2026 Samadhantra. All rights reserved. | <a href="/privacy">Privacy Policy</a></p>
+          <p>&copy; 2026 Samadhantra. All rights reserved. | <Link to="/privacy">Privacy Policy</Link></p>
         </div>
       </div>
 

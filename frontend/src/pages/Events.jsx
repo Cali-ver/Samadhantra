@@ -1,12 +1,15 @@
 import React from 'react';
+import PageHero from '../components/PageHero';
 
 const Events = () => {
   return (
-    <div className="container" style={{ padding: '100px 0', textAlign: 'center' }}>
-      <h2 style={{ fontSize: '2.5rem', color: 'var(--secondary)', marginBottom: '20px' }}>Events</h2>
-      <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', color: 'var(--text-muted)' }}>
-        Stay updated with the latest innovation events and collaborative sessions.
-      </p>
+    <div className="events-page">
+      <PageHero title="Events" />
+      <div className="container" style={{ padding: '80px 0', textAlign: 'center' }}>
+        <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.2rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
+          Stay updated with the latest innovation events and collaborative sessions.
+        </p>
+      </div>
     </div>
   );
 };

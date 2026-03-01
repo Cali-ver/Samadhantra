@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown, Search, Home } from 'lucide-react';
+import { Menu, X, ChevronDown, Search } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Topbar from './Topbar';
 import './Navbar.css';
 import logo from '../assets/logo.jpeg';
@@ -43,20 +44,20 @@ const Navbar = () => {
           {/* Main Nav Row */}
           <div className="nav-main-content">
             <div className="logo">
-              <a href="/">
+              <Link to="/">
                 <img src={logo} alt="Samadhantra Logo" className="logo-img" />
-              </a>
+              </Link>
             </div>
 
             <div className="nav-center">
               <ul className={`nav-links ${isMobileMenuOpen ? 'nav-active' : ''}`}>
-                <li><a href="/">HOME</a></li>
-                <li><a href="/about">ABOUT US <ChevronDown size={14} /></a></li>
-                <li><a href="/stakeholders">STAKEHOLDERS</a></li>
-                <li><a href="/services">SERVICES</a></li>
-                <li><a href="/events">EVENTS</a></li>
-                <li><a href="/blogs">BLOGS</a></li>
-                <li><a href="/contact">CONTACT</a></li>
+                <li><Link to="/">HOME</Link></li>
+                <li><Link to="/about">ABOUT US <ChevronDown size={14} /></Link></li>
+                <li><Link to="/stakeholders">STAKEHOLDERS</Link></li>
+                <li><Link to="/services">SERVICES</Link></li>
+                <li><Link to="/events">EVENTS</Link></li>
+                <li><Link to="/blogs">BLOGS</Link></li>
+                <li><Link to="/contact">CONTACT</Link></li>
               </ul>
             </div>
 
@@ -81,22 +82,22 @@ const Navbar = () => {
               <li className="dropdown utility-item utility-become">
                 <a href="#">Become a Member <ChevronDown size={14} /></a>
                 <ul className="dropdown-menu">
-                  <li><a href="/member-benefits">Benefits</a></li>
-                  <li><a href="/registration">Registration</a></li>
+                  <li><Link to="/member-benefits">Benefits</Link></li>
+                  <li><Link to="/registration">Registration</Link></li>
                 </ul>
               </li>
               <li className="dropdown utility-item utility-member">
                 <a href="#">Members Zone <ChevronDown size={14} /></a>
                 <ul className="dropdown-menu">
-                  <li><a href="/member-login">Login</a></li>
-                  <li><a href="/opportunities">Opportunities</a></li>
+                  <li><Link to="/member-login">Login</Link></li>
+                  <li><Link to="/opportunities">Opportunities</Link></li>
                 </ul>
               </li>
               <li className="dropdown utility-item utility-employee">
                 <a href="#">Employee Zone <ChevronDown size={14} /></a>
                 <ul className="dropdown-menu">
-                  <li><a href="/employee-portal">Portal</a></li>
-                  <li><a href="/vacancies">Careers</a></li>
+                  <li><Link to="/employee-portal">Portal</Link></li>
+                  <li><Link to="/vacancies">Careers</Link></li>
                 </ul>
               </li>
             </div>
