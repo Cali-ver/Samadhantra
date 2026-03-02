@@ -1,0 +1,148 @@
+.founder-section {
+    padding: 20px 0;
+    background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 50%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.founder-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.founder-grid-new {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: auto;
+}
+
+.founder-visual-column {
+    position: relative;
+    background-color: #f8fcf9;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-accent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background-color: #2e7d32;
+}
+
+.founder-image-container {
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.founder-main-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.founder-info-column {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.founder-small-tag {
+    color: #1a5c8a;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: none;
+    margin-bottom: 10px;
+}
+
+.founder-main-name {
+    color: #0d47a1;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.name-divider {
+    width: 60px;
+    height: 3px;
+    background-color: #4caf50;
+    margin-bottom: 25px;
+}
+
+.founder-detailed-bio p {
+    color: #444;
+    font-size: 1.02rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.founder-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.founder-stat-box {
+    background-color: #f1f8f6;
+    padding: 18px 10px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #e0eeea;
+}
+
+.stat-value {
+    display: block;
+    color: #2e7d32;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    display: block;
+    color: #0d47a1;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+@media (max-width: 1024px) {
+    .founder-grid-new {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-visual-column {
+        padding: 30px;
+    }
+
+    .founder-info-column {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .founder-main-name {
+        font-size: 2rem;
+    }
+
+    .founder-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-stat-box {
+        padding: 12px;
+    }
+}
