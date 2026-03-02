@@ -6,6 +6,10 @@ import WhySamadhantra from '../components/WhySamadhantra';
 import OurFounder from '../components/OurFounder';
 import Honorary from '../components/Honorary';
 import Core from '../components/Core';
+import Testimonial from '../components/Testimonial';
+import FAQ from '../components/FAQ';
+import Solution from '../components/Solution';
+import PreFooter from '../components/PreFooter';
 
 const About = () => {
   return (
@@ -17,6 +21,10 @@ const About = () => {
       <OurFounder />
       <Honorary />
       <Core />
+      <Testimonial />
+      <FAQ />
+      <Solution />
+      <PreFooter />
     </div>
   );
 };

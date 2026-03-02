@@ -11,12 +11,12 @@ const testimonials = [
     role: "Founder, Startup / MSME",
     image: authorImg
   },
-  // Adding placeholders for sliding functionality
+  
   {
     text: "The AI-driven matching engine is a game-changer. We found the perfect academic partner for our R&D project within weeks instead of months.",
     name: "Dr. Rajesh K.",
     role: "Director, Innovation Lab",
-    image: authorImg // Placeholder
+    image: authorImg 
   }
 ];
 
