@@ -9,7 +9,7 @@ import Core from '../components/Core';
 import Testimonial from '../components/Testimonial';
 import FAQ from '../components/FAQ';
 import Solution from '../components/Solution';
-import PreFooter from '../components/PreFooter';
+import AboutPreFooter from '../components/AboutPreFooter';
 
 const About = () => {
   return (
@@ -24,7 +24,7 @@ const About = () => {
       <Testimonial />
       <FAQ />
       <Solution />
-      <PreFooter />
+      <AboutPreFooter />
     </div>
   );
 };

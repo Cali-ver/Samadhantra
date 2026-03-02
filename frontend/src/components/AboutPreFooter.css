@@ -1,0 +1,135 @@
+.about-prefooter {
+    padding: 40px 0;
+    background-color: #f1f6f9;
+    /* Light greyish-blue background */
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Corner abstract shapes matching the screenshot */
+.apf-shape {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+}
+
+.apf-shape-top {
+    top: -50px;
+    left: -50px;
+    background-color: #69c164;
+    /* Matching the green we used in Solution */
+    border-radius: 50%;
+    transform: rotate(45deg);
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.apf-shape-bottom {
+    bottom: -50px;
+    right: -50px;
+    background-color: #0b507d;
+    /* Dark blue from screenshot */
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    transform: rotate(-45deg);
+}
+
+.apf-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.apf-label {
+    color: #4CAF50;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+}
+
+.apf-title {
+    color: #111;
+    font-size: 2.6rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.apf-desc {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.apf-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.apf-input-group {
+    width: 100%;
+}
+
+.apf-input {
+    width: 100%;
+    padding: 18px 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #fff;
+}
+
+.apf-input:focus {
+    border-color: #4CAF50;
+}
+
+.apf-btn {
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #1fa2ff 0%, #12d8fa 50%, #064469 100%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.apf-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .apf-title {
+        font-size: 2rem;
+    }
+
+    .apf-desc {
+        font-size: 1rem;
+    }
+
+    .apf-input {
+        padding: 15px 20px;
+    }
+}
