@@ -5,6 +5,7 @@ import MissionVision from '../components/MissionVision';
 import WhySamadhantra from '../components/WhySamadhantra';
 import OurFounder from '../components/OurFounder';
 import Honorary from '../components/Honorary';
+import Core from '../components/Core';
 
 const About = () => {
   return (
@@ -15,6 +16,7 @@ const About = () => {
       <WhySamadhantra />
       <OurFounder />
       <Honorary />
+      <Core />
     </div>
   );
 };

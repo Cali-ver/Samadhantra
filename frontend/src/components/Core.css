@@ -1,24 +1,23 @@
-.honorary-section {
-    padding: 10px 0;
-    background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 50%, #ffffff 100%);
+.core-section {
+    padding: 0 0 10px 0;
+    background: linear-gradient(135deg, #f1f8e6 0%, #ffffff 100%);
     position: relative;
     overflow: hidden;
     text-align: center;
 }
 
-.honorary-header {
+.core-header {
     margin-bottom: 20px;
 }
 
-.honorary-title {
-    color: #4CAF50;
+.core-title {
     color: #0d47a1;
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 10px;
 }
 
-.honorary-subtitle {
+.core-subtitle {
     color: #666;
     font-size: 1.1rem;
     max-width: 600px;
@@ -26,7 +25,7 @@
 }
 
 /* Slider Styles */
-.honorary-slider-container {
+.core-slider-container {
     position: relative;
     display: flex;
     align-items: center;
@@ -51,7 +50,7 @@
     box-sizing: border-box;
 }
 
-.honorary-card {
+.core-card {
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -61,45 +60,46 @@
     height: 100%;
 }
 
-.honorary-card:hover {
+.core-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
-.honorary-image-wrapper {
+.core-image-wrapper {
     width: 100%;
     aspect-ratio: 1 / 1.1;
+    /* Matching the aspect ratio used in Honorary */
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.honorary-img {
+.core-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-.honorary-info {
+.core-info {
     padding: 10px 0;
 }
 
-.advisor-name {
+.member-name {
     color: #0d47a1;
     font-size: 1.25rem;
     font-weight: 800;
     margin-bottom: 5px;
 }
 
-.advisor-role {
+.member-role {
     color: #555;
     font-size: 0.95rem;
     font-weight: 500;
 }
 
-/* Navigation Controls */
+/* Navigation Controls - using same arrows but can be styled maybe slightly different */
 .slider-nav {
     position: absolute;
     top: 50%;
@@ -122,7 +122,6 @@
 .slider-nav:hover {
     background-color: #0d47a1;
     color: #fff;
-    transform: translateY(-50%) scale(1.1);
 }
 
 .slider-nav.prev {
@@ -153,25 +152,22 @@
 }
 
 .dot.active {
-    background-color: #2e7d32;
+    background-color: #0d47a1;
+    /* Different active dot color for Core Team section? Actually consistent is good. Let's use blue to distinguish or keep green. Let's use blue (#0d47a1). */
     width: 25px;
     border-radius: 5px;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 1024px) {
-    .honorary-slider-container {
+    .core-slider-container {
         padding: 0 40px;
     }
 }
 
 @media (max-width: 768px) {
-    .honorary-title {
+    .core-title {
         font-size: 2rem;
-    }
-
-    .honorary-slider-container {
-        padding: 0 40px;
     }
 
     .slider-nav {
