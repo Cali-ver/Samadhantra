@@ -14,16 +14,7 @@ const categories = [
 ];
 
 const eventsData = {
-  'Awards Ceremony': [
-    {
-      title: 'Annual Excellence Awards 2026',
-      description:
-        'Recognizing outstanding contributors and innovators across sectors at Samadhantra\'s flagship awards night.',
-      date: '15 Apr 2026',
-      location: 'Bangalore',
-      image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80',
-    },
-  ],
+  
   'Brainstorming Sessions': [
     {
       title: 'Startup Growth & Networking Meet',
@@ -109,10 +100,10 @@ const EventsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="es-badge">What's On</span>
-          <h2 className="es-title">Explore Our Events</h2>
+         
+          <h2 className="es-title">Events & Engagements</h2>
           <p className="es-subtitle">
-            From brainstorming sessions to award nights — stay connected with Samadhantra's vibrant event calendar.
+           Where ideas connect, collaborations grow, and ecosystems evolve.
           </p>
         </motion.div>
 

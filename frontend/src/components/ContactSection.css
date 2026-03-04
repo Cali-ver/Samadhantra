@@ -1,0 +1,200 @@
+.cs-section {
+  padding: 60px 0 100px;
+  background-color: #fff;
+}
+
+.cs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cs-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.cs-left {
+  flex: 1;
+}
+
+.cs-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cs-badge {
+  color: #0369a1;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.cs-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.cs-desc {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+/* Form Styles */
+.cs-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cs-form-group {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+}
+
+.cs-form-group label {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 0.95rem;
+}
+
+.cs-form-group input,
+.cs-form-group textarea {
+  background-color: #ebf5ff;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 24px;
+  font-size: 1rem;
+  color: #1e293b;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.cs-form-group textarea {
+  border-radius: 20px;
+  resize: none;
+}
+
+.cs-form-group input:focus,
+.cs-form-group textarea:focus {
+  outline: none;
+  background-color: #e0f2fe;
+  box-shadow: 0 0 0 3px rgba(3, 105, 161, 0.1);
+}
+
+.cs-form-terms {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  padding-left: 100px;
+}
+
+.cs-form-terms input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.cs-form-terms label {
+  font-size: 0.9rem;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.cs-form-terms label a {
+  color: #0369a1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cs-form-terms label a:hover {
+  text-decoration: underline;
+}
+
+.cs-submit-btn {
+  margin-top: 10px;
+  margin-left: 100px;
+  width: fit-content;
+  padding: 14px 40px;
+  background: linear-gradient(135deg, #0369a1, #075985);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(3, 105, 161, 0.2);
+}
+
+.cs-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(3, 105, 161, 0.3);
+  background: linear-gradient(135deg, #075985, #0369a1);
+}
+
+.cs-submit-btn:active {
+  transform: translateY(0);
+}
+
+.cs-illustration {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.05));
+}
+
+@media (max-width: 1024px) {
+  .cs-content {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .cs-desc {
+    margin: 0 auto 40px;
+  }
+
+  .cs-form-group {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 8px;
+  }
+
+  .cs-form-terms {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .cs-submit-btn {
+    margin-left: 0;
+    margin: 20px auto 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .cs-title {
+    font-size: 1.8rem;
+  }
+  
+  .cs-form-terms {
+    justify-content: flex-start;
+  }
+  
+  .cs-submit-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+}

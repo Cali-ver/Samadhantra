@@ -1,0 +1,127 @@
+.cm-section {
+  padding: 0; /* Removed top/bottom padding for clean edge-to-edge if needed, or keeping it for spacing */
+  background-color: #f8fafc;
+}
+
+.cm-container-flex-full {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.cm-map-wrapper {
+  flex: 0 0 75%; /* Map gets the larger share */
+  height: 600px;
+  overflow: hidden;
+  border: none;
+}
+
+.cm-map-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.cm-info-card {
+  flex: 0 0 25%; /* Card gets the smaller share (approximating 80/20 while keeping it readable) */
+  background: #f0f9ff;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.cm-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.cm-icon-wrap {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0369a1;
+}
+
+.cm-icon-wrap svg {
+  width: 32px;
+  height: 32px;
+}
+
+.cm-text-wrap h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.cm-text-wrap p {
+  font-size: 0.95rem;
+  color: #0369a1;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .cm-section {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cm-map-container {
+    height: 400px;
+    order: 2;
+  }
+
+  .cm-info-card {
+    position: static;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    padding: 60px 20px;
+    order: 1;
+  }
+  
+  .cm-info-card {
+    background-color: #f0f9ff;
+    backdrop-filter: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .cm-info-card {
+    padding: 40px 15px;
+  }
+  
+  .cm-icon-wrap {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .cm-icon-wrap svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .cm-text-wrap h3 {
+    font-size: 1.1rem;
+  }
+  
+  .cm-text-wrap p {
+    font-size: 0.9rem;
+  }
+}

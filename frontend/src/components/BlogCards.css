@@ -1,0 +1,158 @@
+.bc-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.bc-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.bc-badge {
+  color: #16a34a;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.bc-main-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.bc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.bc-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.bc-img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.bc-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.bc-card:hover .bc-img-wrap img {
+  transform: scale(1.05);
+}
+
+.bc-meta {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.bc-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bc-meta svg {
+  width: 16px;
+  height: 16px;
+  color: #0369a1;
+}
+
+.bc-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.bc-read-more {
+  color: #0369a1;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.bc-read-more:hover {
+  text-decoration: underline;
+}
+
+/* Pagination */
+.bc-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.bc-pag-btn,
+.bc-pag-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #d1fae5;
+  color: #065f46;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bc-pag-num.active {
+  background-color: #0369a1;
+  color: #fff;
+}
+
+.bc-pag-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.bc-pag-btn:hover,
+.bc-pag-num:not(.active):hover {
+  background-color: #a7f3d0;
+}
+
+@media (max-width: 1024px) {
+  .bc-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .bc-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bc-main-title {
+    font-size: 1.8rem;
+  }
+}
